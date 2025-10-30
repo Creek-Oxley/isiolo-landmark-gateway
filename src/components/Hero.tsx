@@ -18,7 +18,8 @@ const Hero = ({ image, title, subtitle, showCTA = false, height = "h-screen" }: 
           backgroundImage: `url(${image})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" /> */}
+
       </div>
 
       {/* Content */}
