@@ -186,8 +186,11 @@ const Festive = () => {
                 variant="hero"
                 size="lg"
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                asChild
               >
-                Contact Events Team
+                <a href="mailto:info@isiololandmarkhotel.co.ke?subject=Festive%20Celebration%20Inquiry">
+                  Contact Events Team
+                </a>
               </Button>
             </div>
           </div>

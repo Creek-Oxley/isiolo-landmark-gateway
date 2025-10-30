@@ -164,7 +164,7 @@ const About = () => {
                     <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+254 XXX XXX XXX</p>
+                      <p className="text-muted-foreground">+254 110 463 062</p>
                     </div>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ const About = () => {
                     <Mail className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Email</h4>
-                      <p className="text-muted-foreground">info@isiololandmark.com</p>
+                      <p className="text-muted-foreground">info@isiololandmarkhotel.co.ke</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

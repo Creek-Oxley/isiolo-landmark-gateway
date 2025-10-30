@@ -1,14 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import diningImage from "@/assets/dining.jpg";
+import diningHero from "@/assets/dining/_MG_0119.jpg";
+import dining1 from "@/assets/dining/_MG_0139.jpg";
+import dining2 from "@/assets/dining/_MG_0143.jpg";
+import dining3 from "@/assets/dining/_MG_0189.jpg";
+import dining4 from "@/assets/dining/_MG_9996.jpg";
 
 const Dining = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <Hero
-        image={diningImage}
+        image={diningHero}
         title="Dining"
         subtitle="A culinary journey celebrating local and international flavors"
         height="h-[70vh]"
@@ -22,6 +26,30 @@ const Dining = () => {
               Enjoy a culinary journey at our on-site restaurant, featuring both local Kenyan
               specialties and international cuisines prepared by our expert chefs.
             </p>
+
+            {/* Gallery Section */}
+            <div className="grid md:grid-cols-2 gap-6 mb-16">
+              <img
+                src={dining1}
+                alt="Restaurant Interior"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+              <img
+                src={dining2}
+                alt="Dining Experience"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+              <img
+                src={dining3}
+                alt="Culinary Delights"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+              <img
+                src={dining4}
+                alt="Fine Dining"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+            </div>
 
             <div className="grid md:grid-cols-2 gap-12 mb-20">
               <div>

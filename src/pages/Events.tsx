@@ -200,8 +200,11 @@ const Events = () => {
                 variant="hero"
                 size="lg"
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                asChild
               >
-                Request a Proposal
+                <a href="mailto:info@isiololandmarkhotel.co.ke?subject=Event%20Proposal%20Request">
+                  Request a Proposal
+                </a>
               </Button>
             </div>
           </div>

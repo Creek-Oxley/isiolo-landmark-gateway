@@ -1,7 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import roomImage from "@/assets/room-deluxe.jpg";
+import roomImage from "@/assets/rooms/_MG_0004.jpg";
+import room1 from "@/assets/rooms/_MG_9920.jpg";
+import room2 from "@/assets/rooms/_MG_0008.jpg";
+import room3 from "@/assets/rooms/_MG_9945.jpg";
+import room4 from "@/assets/rooms/_MG_0021.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Wifi, Coffee, Wind } from "lucide-react";
@@ -14,6 +18,7 @@ const Accommodation = () => {
       description: "Perfect for solo travelers and short-term stays",
       capacity: "1-2 Guests",
       amenities: ["Free WiFi", "Air Conditioning", "Flat Screen TV", "En-suite Bathroom"],
+      image: room1,
     },
     {
       type: "Deluxe Room",
@@ -21,6 +26,7 @@ const Accommodation = () => {
       description: "Spacious and ideal for couples or guests seeking extra comfort",
       capacity: "2 Guests",
       amenities: ["King Size Bed", "Work Desk", "Mini Bar", "Premium Toiletries"],
+      image: room2,
     },
     {
       type: "Superior Deluxe",
@@ -28,6 +34,7 @@ const Accommodation = () => {
       description: "Enhanced comfort with modern amenities",
       capacity: "2-3 Guests",
       amenities: ["Balcony", "Coffee Maker", "Seating Area", "Room Service"],
+      image: room3,
     },
     {
       type: "Executive Suite",
@@ -35,6 +42,7 @@ const Accommodation = () => {
       description: "Luxurious suites with separate living areas",
       capacity: "2-4 Guests",
       amenities: ["Separate Living Room", "Kitchenette", "Premium Bedding", "Butler Service"],
+      image: room4,
     },
   ];
 
@@ -62,7 +70,7 @@ const Accommodation = () => {
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="h-64 bg-muted relative overflow-hidden">
                   <img
-                    src={roomImage}
+                    src={room.image}
                     alt={room.type}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
@@ -102,8 +110,10 @@ const Accommodation = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="hero" className="w-full">
-                    Reserve Room
+                  <Button variant="hero" className="w-full" asChild>
+                    <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+                      Reserve Room
+                    </a>
                   </Button>
                 </CardContent>
               </Card>

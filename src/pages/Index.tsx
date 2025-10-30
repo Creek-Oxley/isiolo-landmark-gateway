@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
-import roomImage from "@/assets/room-deluxe.jpg";
-import diningImage from "@/assets/dining.jpg";
+import roomImage from "@/assets/rooms/_MG_9920.jpg";
+import diningImage from "@/assets/dining/_MG_0119.jpg";
 import experiencesImage from "@/assets/experiences.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -133,8 +133,11 @@ const Index = () => {
             variant="hero"
             size="lg"
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-10 py-6 h-auto"
+            asChild
           >
-            BOOK NOW
+            <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+              BOOK NOW
+            </a>
           </Button>
         </div>
       </section>

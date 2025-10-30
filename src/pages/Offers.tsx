@@ -78,8 +78,10 @@ const Offers = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="hero" className="w-full">
-                    Book Now
+                  <Button variant="hero" className="w-full" asChild>
+                    <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+                      Book Now
+                    </a>
                   </Button>
                 </CardContent>
               </Card>

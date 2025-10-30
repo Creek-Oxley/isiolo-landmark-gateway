@@ -31,6 +31,8 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const allLinks = [...navLinks, ...navLinksRight];
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -41,39 +43,20 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Left Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
-                  isActive(link.path)
-                    ? "text-accent"
-                    : isScrolled
-                    ? "text-foreground"
-                    : "text-white"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Center Logo */}
+          {/* Logo on the left */}
           <Link to="/" className="flex items-center">
             <img
               src={logo}
               alt="Isiolo Landmark Hotel"
               className={`transition-all duration-300 ${
-                isScrolled ? "h-16" : "h-20"
+                isScrolled ? "h-12" : "h-14"
               }`}
             />
           </Link>
 
-          {/* Right Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinksRight.map((link) => (
+          {/* Navigation links centered to the right */}
+          <div className="hidden lg:flex items-center gap-6 flex-1 justify-center ml-12">
+            {allLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -88,8 +71,10 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button variant="hero" size="lg">
-              BOOK NOW
+            <Button variant="hero" size="lg" asChild>
+              <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+                BOOK NOW
+              </a>
             </Button>
           </div>
 
