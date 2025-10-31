@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Isiolo Landmark Hotel - News &amp; Updates</title>
+    <link>https://isiololandmarkhotel.co.ke</link>
+    <description>Stay updated with the latest news, offers, and events from Isiolo Landmark Hotel - Gateway to Northern Kenya's spectacular wildlife reserves.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Oct 2025 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://isiololandmarkhotel.co.ke/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Festive Season Celebrations at Isiolo Landmark Hotel</title>
+      <link>https://isiololandmarkhotel.co.ke/festive</link>
+      <description>Join us for an unforgettable festive season with special events, gala dinners, and exclusive packages for families and groups.</description>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
+      <guid>https://isiololandmarkhotel.co.ke/festive</guid>
+    </item>
+    
+    <item>
+      <title>Special Offers - Book Your Gateway to Northern Kenya</title>
+      <link>https://isiololandmarkhotel.co.ke/offers</link>
+      <description>Discover our exclusive packages and special offers for accommodation, dining, and safari experiences in Isiolo.</description>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
+      <guid>https://isiololandmarkhotel.co.ke/offers</guid>
+    </item>
+    
+    <item>
+      <title>Explore Buffalo Springs, Samburu &amp; Shaba National Reserves</title>
+      <link>https://isiololandmarkhotel.co.ke/experiences</link>
+      <description>Experience unforgettable wildlife safaris and cultural tours with Isiolo Landmark Hotel as your base for Northern Kenya adventures.</description>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
+      <guid>https://isiololandmarkhotel.co.ke/experiences</guid>
+    </item>
+  </channel>
+</rss>
