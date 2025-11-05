@@ -1,14 +1,29 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import RoomCarousel from "@/components/RoomCarousel";
 import roomImage from "@/assets/rooms/_MG_0004.jpg";
-import room1 from "@/assets/rooms/_MG_9920.jpg";
-import room2 from "@/assets/rooms/_MG_0008.jpg";
-import room3 from "@/assets/rooms/_MG_9945.jpg";
-import room4 from "@/assets/rooms/_MG_0021.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Wifi, Coffee, Wind } from "lucide-react";
+import { Link } from "react-router-dom";
+
+// Import all room images for carousels
+import standard1 from "@/assets/rooms/_MG_0050.jpg";
+import standard2 from "@/assets/rooms/_MG_0055.jpg";
+import standard3 from "@/assets/rooms/_MG_0056.jpg";
+
+import deluxe1 from "@/assets/rooms/_MG_0008.jpg";
+import deluxe2 from "@/assets/rooms/_MG_0014.jpg";
+import deluxe3 from "@/assets/rooms/_MG_0017.jpg";
+
+import superior1 from "@/assets/rooms/_MG_9945.jpg";
+import superior2 from "@/assets/rooms/_MG_9948.jpg";
+import superior3 from "@/assets/rooms/_MG_9957.jpg";
+
+import executive1 from "@/assets/rooms/_MG_0021.jpg";
+import executive2 from "@/assets/rooms/_MG_0023.jpg";
+import executive3 from "@/assets/rooms/_MG_0035.jpg";
 
 const Accommodation = () => {
   const rooms = [
@@ -18,7 +33,7 @@ const Accommodation = () => {
       description: "Perfect for solo travelers and short-term stays",
       capacity: "1-2 Guests",
       amenities: ["Free WiFi", "Air Conditioning", "Flat Screen TV", "En-suite Bathroom"],
-      image: room1,
+      images: [standard1, standard2, standard3],
     },
     {
       type: "Deluxe Room",
@@ -26,7 +41,7 @@ const Accommodation = () => {
       description: "Spacious and ideal for couples or guests seeking extra comfort",
       capacity: "2 Guests",
       amenities: ["King Size Bed", "Work Desk", "Mini Bar", "Premium Toiletries"],
-      image: room2,
+      images: [deluxe1, deluxe2, deluxe3],
     },
     {
       type: "Superior Deluxe",
@@ -34,7 +49,7 @@ const Accommodation = () => {
       description: "Enhanced comfort with modern amenities",
       capacity: "2-3 Guests",
       amenities: ["Balcony", "Coffee Maker", "Seating Area", "Room Service"],
-      image: room3,
+      images: [superior1, superior2, superior3],
     },
     {
       type: "Executive Suite",
@@ -42,7 +57,7 @@ const Accommodation = () => {
       description: "Luxurious suites with separate living areas",
       capacity: "2-4 Guests",
       amenities: ["Separate Living Room", "Kitchenette", "Premium Bedding", "Butler Service"],
-      image: room4,
+      images: [executive1, executive2, executive3],
     },
   ];
 
@@ -68,13 +83,7 @@ const Accommodation = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {rooms.map((room, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-64 bg-muted relative overflow-hidden">
-                  <img
-                    src={room.image}
-                    alt={room.type}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+                <RoomCarousel images={room.images} roomType={room.type} />
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <CardTitle className="text-2xl text-primary">{room.type}</CardTitle>
@@ -111,9 +120,9 @@ const Accommodation = () => {
                     ))}
                   </div>
                   <Button variant="hero" className="w-full" asChild>
-                    <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+                    <Link to="/reservation">
                       Reserve Room
-                    </a>
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

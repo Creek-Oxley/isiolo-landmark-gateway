@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   image: string;
@@ -35,9 +36,9 @@ const Hero = ({ image, title, subtitle, showCTA = false, height = "h-screen" }: 
         {showCTA && (
           <div className="flex gap-4 justify-center">
             <Button variant="hero" size="lg" className="text-base px-8 py-6 h-auto" asChild>
-              <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+              <Link to="/reservation">
                 BOOK YOUR STAY
-              </a>
+              </Link>
             </Button>
             <Button
               variant="outline"
@@ -45,9 +46,9 @@ const Hero = ({ image, title, subtitle, showCTA = false, height = "h-screen" }: 
               className="text-base px-8 py-6 h-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
               asChild
             >
-              <a href="/accommodation">
+              <Link to="/accommodation">
                 EXPLORE ROOMS
-              </a>
+              </Link>
             </Button>
           </div>
         )}

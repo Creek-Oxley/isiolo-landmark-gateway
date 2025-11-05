@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const Offers = () => {
   const offers = [
@@ -79,9 +80,9 @@ const Offers = () => {
                     ))}
                   </ul>
                   <Button variant="hero" className="w-full" asChild>
-                    <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+                    <Link to="/reservation">
                       Book Now
-                    </a>
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

@@ -2,11 +2,17 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
-import roomImage from "@/assets/rooms/_MG_9920.jpg";
 import diningImage from "@/assets/dining/_MG_0119.jpg";
 import experiencesImage from "@/assets/experiences.jpg";
+import RoomCarousel from "@/components/RoomCarousel";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
+// Import room images for carousel
+import room1 from "@/assets/rooms/_MG_0014.jpg";
+import room2 from "@/assets/rooms/_MG_0006.jpg";
+import room3 from "@/assets/rooms/_MG_0008.jpg";
+import room4 from "@/assets/rooms/_MG_0017.jpg";
 
 const Index = () => {
   return (
@@ -65,10 +71,9 @@ const Index = () => {
               </Link>
             </div>
             <div className="order-1 md:order-2">
-              <img
-                src={roomImage}
-                alt="Luxury Room"
-                className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
+              <RoomCarousel 
+                images={[room1, room2, room3, room4]} 
+                roomType="Hotel Rooms" 
               />
             </div>
           </div>
@@ -135,9 +140,9 @@ const Index = () => {
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-10 py-6 h-auto"
             asChild
           >
-            <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+            <Link to="/reservation">
               BOOK NOW
-            </a>
+            </Link>
           </Button>
         </div>
       </section>

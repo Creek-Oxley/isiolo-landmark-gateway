@@ -26,6 +26,7 @@ const Navbar = () => {
     { name: "Experiences", path: "/experiences" },
     { name: "Festive", path: "/festive" },
     { name: "Events", path: "/events" },
+    { name: "Blog", path: "/blog" },
     { name: "About", path: "/about" },
   ];
 
@@ -72,9 +73,9 @@ const Navbar = () => {
               </Link>
             ))}
             <Button variant="hero" size="lg" asChild>
-              <a href="https://bookings.isiololandmarkhotel.co.ke" target="_blank" rel="noopener noreferrer">
+              <Link to="/reservation">
                 BOOK NOW
-              </a>
+              </Link>
             </Button>
           </div>
 
