@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Check, MapPin, Phone, Mail } from "lucide-react";
 
-const ExploreSamburu = () => {
+const ExploreNorthernKenya = () => {
   useEffect(() => {
     document.title = "Explore Samburu from Isiolo – The Ultimate Northern Kenya Getaway | Landmark Hotel Isiolo";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -388,4 +388,4 @@ const ExploreSamburu = () => {
   );
 };
 
-export default ExploreSamburu;
+export default ExploreNorthernKenya;
