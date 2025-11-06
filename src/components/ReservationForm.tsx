@@ -14,23 +14,23 @@ const ReservationForm = () => {
   const rooms = [
     {
       value: "standard",
-      label: "Standard Room - $50/night",
-      description: "Perfect for solo travelers and short-term stays with essential amenities"
+      label: "Standard Room",
+      description: "Single: B&B KES 5,000 | Half Board KES 7,000 | Full Board KES 8,500"
     },
     {
       value: "deluxe",
-      label: "Deluxe Room - $65-$80/night",
-      description: "Spacious room ideal for couples with king-size bed and premium features"
+      label: "Deluxe Room",
+      description: "Single: B&B KES 6,500 | HB KES 8,000 | FB KES 10,000 • Double: B&B KES 8,000 | HB KES 9,500 | FB KES 11,000"
     },
     {
       value: "superior",
-      label: "Superior Deluxe - $75-$90/night",
-      description: "Enhanced comfort with balcony, coffee maker, and seating area"
+      label: "Superior Deluxe",
+      description: "Single: B&B KES 7,500 | HB KES 9,000 | FB KES 10,500 • Double: B&B KES 9,000 | HB KES 10,500 | FB KES 12,000"
     },
     {
       value: "executive",
-      label: "Executive Suite - $85-$100/night",
-      description: "Luxurious suite with separate living room, kitchenette, and butler service"
+      label: "Executive Suite",
+      description: "Single: B&B KES 8,500 | HB KES 10,000 | FB KES 11,500 • Double: B&B KES 10,000 | HB KES 13,000 | FB KES 16,000"
     }
   ];
 

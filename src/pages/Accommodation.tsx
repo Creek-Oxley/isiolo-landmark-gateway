@@ -29,35 +29,39 @@ const Accommodation = () => {
   const rooms = [
     {
       type: "Standard Room",
-      price: "$50",
+      price: "KES 5,000 - 8,500",
       description: "Perfect for solo travelers and short-term stays",
       capacity: "1-2 Guests",
       amenities: ["Free WiFi", "Air Conditioning", "Flat Screen TV", "En-suite Bathroom"],
       images: [standard1, standard2, standard3],
+      pricing: "Single: B&B 5,000 | HB 7,000 | FB 8,500"
     },
     {
       type: "Deluxe Room",
-      price: "$65 - $80",
+      price: "KES 6,500 - 11,000",
       description: "Spacious and ideal for couples or guests seeking extra comfort",
       capacity: "2 Guests",
       amenities: ["King Size Bed", "Work Desk", "Mini Bar", "Premium Toiletries"],
       images: [deluxe1, deluxe2, deluxe3],
+      pricing: "Single: B&B 6,500 | HB 8,000 | FB 10,000 • Double: B&B 8,000 | HB 9,500 | FB 11,000"
     },
     {
       type: "Superior Deluxe",
-      price: "$75 - $90",
+      price: "KES 7,500 - 12,000",
       description: "Enhanced comfort with modern amenities",
       capacity: "2-3 Guests",
       amenities: ["Balcony", "Coffee Maker", "Seating Area", "Room Service"],
       images: [superior1, superior2, superior3],
+      pricing: "Single: B&B 7,500 | HB 9,000 | FB 10,500 • Double: B&B 9,000 | HB 10,500 | FB 12,000"
     },
     {
       type: "Executive Suite",
-      price: "$85 - $100",
+      price: "KES 8,500 - 16,000",
       description: "Luxurious suites with separate living areas",
       capacity: "2-4 Guests",
       amenities: ["Separate Living Room", "Kitchenette", "Premium Bedding", "Butler Service"],
       images: [executive1, executive2, executive3],
+      pricing: "Single: B&B 8,500 | HB 10,000 | FB 11,500 • Double: B&B 10,000 | HB 13,000 | FB 16,000"
     },
   ];
 
@@ -93,6 +97,7 @@ const Accommodation = () => {
                     </div>
                   </div>
                   <CardDescription className="text-base">{room.description}</CardDescription>
+                  <p className="text-xs text-muted-foreground mt-2">{room.pricing}</p>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center gap-2 mb-4 text-sm text-muted-foreground">
