@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
 import { Button } from "@/components/ui/button";
+import { setupPageSEO } from "@/utils/seo";
 
 const Festive = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/festive",
+      title: "Festive Celebrations & Private Events - Isiolo Landmark Hotel",
+      description: "Celebrate special occasions at Isiolo Landmark Hotel. Holiday celebrations, weddings, birthdays, anniversaries, and private parties with exceptional service.",
+      keywords: "Isiolo wedding venue, holiday celebrations Kenya, private parties Isiolo, birthday celebrations, anniversary events Northern Kenya"
+    });
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />

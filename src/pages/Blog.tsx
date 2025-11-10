@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -5,8 +6,18 @@ import heroImage from "@/assets/hero-home.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import { setupPageSEO } from "@/utils/seo";
 
 const Blog = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/blog",
+      title: "Travel Blog & Tips - Isiolo Landmark Hotel",
+      description: "Discover travel guides, local insights, and tips for exploring Northern Kenya. Read about Samburu safaris, Isiolo attractions, and travel advice.",
+      keywords: "Isiolo travel blog, Northern Kenya travel guide, Samburu safari tips, Kenya travel advice, Isiolo attractions guide"
+    });
+  }, []);
+
   const posts = [
     {
       title: "Exploring Samburu National Reserve",

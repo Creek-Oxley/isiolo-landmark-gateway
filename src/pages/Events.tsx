@@ -1,11 +1,22 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import eventsImage from "@/assets/events.jpg";
 import { Button } from "@/components/ui/button";
 import { Users, Wifi, Coffee, Monitor } from "lucide-react";
+import { setupPageSEO } from "@/utils/seo";
 
 const Events = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/events",
+      title: "Conference & Business Events - Isiolo Landmark Hotel",
+      description: "Host successful corporate events at Isiolo Landmark Hotel. Conference facilities, meeting rooms, business lounge, and professional event coordination services.",
+      keywords: "Isiolo conference facilities, business meetings Kenya, corporate events Isiolo, meeting rooms Northern Kenya, event venue Isiolo"
+    });
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />

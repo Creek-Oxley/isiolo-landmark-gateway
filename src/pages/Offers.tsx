@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -5,8 +6,17 @@ import heroImage from "@/assets/hero-home.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { setupPageSEO } from "@/utils/seo";
 
 const Offers = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/offers",
+      title: "Special Offers & Packages - Isiolo Landmark Hotel",
+      description: "Discover exclusive deals and packages at Isiolo Landmark Hotel. Safari packages, business traveler specials, and romantic getaways at unbeatable prices.",
+      keywords: "Isiolo hotel offers, safari packages Kenya, hotel deals Isiolo, weekend getaway Kenya, business hotel specials"
+    });
+  }, []);
   const offers = [
     {
       title: "Safari Adventure Package",

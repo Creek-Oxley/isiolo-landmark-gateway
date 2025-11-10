@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -6,8 +7,18 @@ import dining1 from "@/assets/dining/_MG_0139.jpg";
 import dining2 from "@/assets/dining/_MG_0143.jpg";
 import dining3 from "@/assets/dining/_MG_0189.jpg";
 import dining4 from "@/assets/dining/_MG_9996.jpg";
+import { setupPageSEO } from "@/utils/seo";
 
 const Dining = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/dining",
+      title: "Restaurant & Dining - Isiolo Landmark Hotel",
+      description: "Experience exceptional dining at Isiolo Landmark Hotel. Enjoy local Kenyan cuisine and international dishes, private dining, room service, and event catering.",
+      keywords: "Isiolo restaurant, hotel dining Kenya, local cuisine Isiolo, international food Northern Kenya, private dining Isiolo"
+    });
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />

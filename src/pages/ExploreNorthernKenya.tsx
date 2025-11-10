@@ -5,34 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Check, MapPin, Phone, Mail } from "lucide-react";
+import { setupPageSEO } from "@/utils/seo";
 
 const ExploreNorthernKenya = () => {
   useEffect(() => {
-    document.title = "Explore Samburu from Isiolo – The Ultimate Northern Kenya Getaway | Landmark Hotel Isiolo";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Experience the perfect fusion of Isiolo's urban comfort and Samburu's wilderness charm. 2 nights full board package from Ksh 20,000 per person. Book your Samburu safari from Isiolo Landmark Hotel today."
-      );
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = "Experience the perfect fusion of Isiolo's urban comfort and Samburu's wilderness charm. 2 nights full board package from Ksh 20,000 per person. Book your Samburu safari from Isiolo Landmark Hotel today.";
-      document.head.appendChild(meta);
-    }
-
-    // SEO Keywords meta tag
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    const keywordsContent = "Isiolo hotels, Samburu lodges, Isiolo to Samburu tour, Isiolo accommodation, Samburu game drive, northern Kenya safari, Samburu Elephant Lodge, Landmark Hotel Isiolo, explore Samburu from Isiolo, weekend getaway Kenya";
-    if (metaKeywords) {
-      metaKeywords.setAttribute("content", keywordsContent);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "keywords";
-      meta.content = keywordsContent;
-      document.head.appendChild(meta);
-    }
+    setupPageSEO({
+      path: "/explore-northern-kenya",
+      title: "Explore Samburu from Isiolo – The Ultimate Northern Kenya Getaway | Landmark Hotel Isiolo",
+      description: "Experience the perfect fusion of Isiolo's urban comfort and Samburu's wilderness charm. 2 nights full board package from Ksh 20,000 per person. Book your Samburu safari from Isiolo Landmark Hotel today.",
+      keywords: "Isiolo hotels, Samburu lodges, Isiolo to Samburu tour, Isiolo accommodation, Samburu game drive, northern Kenya safari, Samburu Elephant Lodge, Landmark Hotel Isiolo, explore Samburu from Isiolo, weekend getaway Kenya"
+    });
   }, []);
 
   const scrollToBooking = () => {

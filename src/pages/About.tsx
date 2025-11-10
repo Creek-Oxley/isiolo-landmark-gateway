@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { setupPageSEO } from "@/utils/seo";
 
 const About = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/about",
+      title: "About Us - Isiolo Landmark Hotel | Premier Northern Kenya Hotel",
+      description: "Learn about Isiolo Landmark Hotel, your gateway to Northern Kenya. Strategic location, modern facilities, and exceptional hospitality since our establishment.",
+      keywords: "about Isiolo Landmark Hotel, hotel history Isiolo, Northern Kenya hospitality, business hotel Isiolo, contact Isiolo hotel"
+    });
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />

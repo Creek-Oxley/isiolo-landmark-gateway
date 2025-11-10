@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import experiencesImage from "@/assets/experiences.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { setupPageSEO } from "@/utils/seo";
 
 const Experiences = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/experiences",
+      title: "Safari Experiences & Wildlife Tours - Isiolo Landmark Hotel",
+      description: "Explore Samburu and Buffalo Springs National Reserves from Isiolo Landmark Hotel. Game drives, cultural visits, and unforgettable wildlife experiences.",
+      keywords: "Samburu safari, Buffalo Springs Reserve, Northern Kenya wildlife, game drives Isiolo, safari tours Kenya, cultural experiences Isiolo"
+    });
+  }, []);
+
   const attractions = [
     {
       name: "Buffalo Springs National Reserve",

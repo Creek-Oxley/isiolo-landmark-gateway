@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -7,6 +8,7 @@ import experiencesImage from "@/assets/experiences.jpg";
 import RoomCarousel from "@/components/RoomCarousel";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { setupPageSEO } from "@/utils/seo";
 
 // Import room images for carousel
 import room1 from "@/assets/rooms/_MG_0014.jpg";
@@ -15,6 +17,15 @@ import room3 from "@/assets/rooms/_MG_0008.jpg";
 import room4 from "@/assets/rooms/_MG_0017.jpg";
 
 const Index = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/",
+      title: "Isiolo Landmark Hotel - Premier Business & Leisure Destination",
+      description: "Experience luxury at Isiolo Landmark Hotel - Gateway to Northern Kenya's spectacular wildlife reserves. Offering premium accommodation, conference facilities, and safari experiences.",
+      keywords: "Isiolo hotel, Northern Kenya accommodation, Samburu safari, business hotel Isiolo, conference facilities Kenya, luxury hotel Isiolo"
+    });
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />

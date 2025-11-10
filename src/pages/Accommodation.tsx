@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -7,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Wifi, Coffee, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
+import { setupPageSEO } from "@/utils/seo";
 
 // Import all room images for carousels
 import standard1 from "@/assets/rooms/_MG_0050.jpg";
@@ -26,6 +28,15 @@ import executive2 from "@/assets/rooms/_MG_0023.jpg";
 import executive3 from "@/assets/rooms/_MG_0035.jpg";
 
 const Accommodation = () => {
+  useEffect(() => {
+    setupPageSEO({
+      path: "/accommodation",
+      title: "Luxury Accommodation - Rooms & Suites | Isiolo Landmark Hotel",
+      description: "Choose from Standard, Deluxe, Superior Deluxe rooms and Executive Suites at Isiolo Landmark Hotel. Modern amenities, comfortable beds, and exceptional service.",
+      keywords: "Isiolo hotel rooms, luxury accommodation Isiolo, hotel suites Northern Kenya, executive rooms Isiolo, deluxe hotel rooms Kenya"
+    });
+  }, []);
+
   const rooms = [
     {
       type: "Standard Room",
