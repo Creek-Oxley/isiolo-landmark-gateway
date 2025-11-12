@@ -47,7 +47,7 @@ const Events = () => {
                   <li className="flex items-start gap-3">
                     <Users className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold mb-1">Capacity for 500 Guests</p>
+                      <p className="font-semibold mb-1">Capacity for 150 Guests</p>
                       <p className="text-sm text-muted-foreground">
                         Flexible seating arrangements for various event types
                       </p>
