@@ -31,146 +31,84 @@ const Events = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl mb-6">World-Class Event Facilities</h2>
+              <h2 className="text-4xl md:text-5xl mb-6">Meetings, Conferences & Corporate Events</h2>
               <p className="text-lg text-muted-foreground">
-                Our versatile conference halls and meeting spaces are designed to accommodate
-                corporate events, conferences, training sessions, and private functions with
-                professional excellence.
+                At the Landmark Hotel, Isiolo, we redefine the art of business gatherings with modern facilities, 
+                seamless service, and an inspiring atmosphere. Whether it's a high-level board meeting, a large 
+                corporate seminar, or a private workshop, our spaces are designed to meet your every need with 
+                elegance and efficiency.
               </p>
             </div>
 
             {/* Main Features */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="space-y-8 mb-16">
               <div className="bg-secondary p-8 rounded-lg">
-                <h3 className="text-2xl text-primary mb-4">Conference Facilities</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Users className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">Capacity for 150 Guests</p>
-                      <p className="text-sm text-muted-foreground">
-                        Flexible seating arrangements for various event types
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Wifi className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">High-Speed Internet</p>
-                      <p className="text-sm text-muted-foreground">
-                        Reliable connectivity throughout the venue
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Monitor className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">AV Equipment</p>
-                      <p className="text-sm text-muted-foreground">
-                        Professional sound system and projection facilities
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Coffee className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">Catering Services</p>
-                      <p className="text-sm text-muted-foreground">
-                        Coffee breaks, lunch, and refreshments
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+                <h3 className="text-2xl text-primary mb-6">Conference Facilities</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">Boardrooms</h4>
+                    <p className="text-muted-foreground">
+                      Ideal for executive meetings and private discussions, our boardrooms provide a professional 
+                      setting with comfortable seating, natural lighting, and a serene environment that encourages 
+                      focus and collaboration.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">Spacious Conference Halls</h4>
+                    <p className="text-muted-foreground">
+                      Designed to host between 150 to 500 guests, our conference halls are versatile and can be 
+                      customized for various setups — from theatre and classroom arrangements to banquets and exhibitions.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">Modern Technology</h4>
+                    <p className="text-muted-foreground">
+                      Each space is equipped with high-speed Wi-Fi, audio-visual systems, projectors, public address 
+                      systems, and smart screens to ensure every presentation and meeting runs smoothly.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">Support Services</h4>
+                    <p className="text-muted-foreground">
+                      Our experienced event and technical teams are always on hand to assist with setup, coordination, 
+                      and guest support, ensuring a stress-free experience from start to finish.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">Ambiance & Comfort</h4>
+                    <p className="text-muted-foreground">
+                      Elegant interiors and climate-controlled rooms provide the perfect balance of comfort, privacy, 
+                      and professionalism.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2">Catering & Refreshments</h4>
+                    <p className="text-muted-foreground">
+                      Our restaurant provides tailor-made menus — from tea breaks and working lunches to gala dinners — 
+                      all crafted with fresh, locally sourced ingredients.
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-secondary p-8 rounded-lg">
-                <h3 className="text-2xl text-primary mb-4">Additional Services</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-accent flex-shrink-0 mt-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-semibold">Private Meeting Rooms</p>
-                      <p className="text-sm text-muted-foreground">
-                        For breakout sessions and board meetings
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-accent flex-shrink-0 mt-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-semibold">Business Lounge</p>
-                      <p className="text-sm text-muted-foreground">
-                        Comfortable space for networking and informal meetings
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-accent flex-shrink-0 mt-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-semibold">Secretarial Services</p>
-                      <p className="text-sm text-muted-foreground">
-                        Printing, copying, and document support
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-accent flex-shrink-0 mt-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-semibold">Dedicated Event Coordinator</p>
-                      <p className="text-sm text-muted-foreground">
-                        Professional support throughout your event
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-secondary p-8 rounded-lg">
+                  <h3 className="text-2xl text-primary mb-4">Ample Parking & Security</h3>
+                  <p className="text-muted-foreground">
+                    Landmark Hotel offers ample and secure parking facilities for all our guests, ensuring peace 
+                    of mind throughout your stay. Our 24-hour security team and surveillance systems guarantee a 
+                    safe environment for both guests and their vehicles.
+                  </p>
+                </div>
+
+                <div className="bg-secondary p-8 rounded-lg">
+                  <h3 className="text-2xl text-primary mb-4">Concierge Services</h3>
+                  <p className="text-muted-foreground">
+                    Our professional concierge team is always on hand to assist with travel arrangements, local 
+                    excursions, transport coordination, and any special requests, making every guest experience 
+                    seamless and memorable.
+                  </p>
+                </div>
               </div>
             </div>
 
