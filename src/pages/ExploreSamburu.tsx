@@ -8,7 +8,7 @@ import { setupPageSEO } from "@/utils/seo";
 import { Phone, Mail, MessageCircle, Wifi, Car, UtensilsCrossed, Shield, Calendar, Users, Bed, MapPin, Clock, CheckCircle } from "lucide-react";
 
 // Import images
-import heroImage from "@/assets/samburu/_MG_5144 (4).jpg";
+import heroImage from "@/assets/samburu/hero-samburu.jpg";
 import samburu1 from "@/assets/samburu/_MG_0419 (1).jpg";
 import samburu2 from "@/assets/samburu/_MG_0425.jpg";
 import samburu3 from "@/assets/samburu/_MG_0915 (3).jpg";
