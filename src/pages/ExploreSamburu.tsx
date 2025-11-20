@@ -110,7 +110,7 @@ const ExploreSamburu = () => {
               Why Stay in Isiolo Before Your Samburu Adventure?
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Isiolo is the perfect base for exploring Samburu National Reserve. Located just 70km away, 
+              Isiolo is the perfect base for exploring Samburu National Reserve. Located just 39km away, 
               our hotel offers budget-friendly comfort with easy access to one of Kenya's most stunning wildlife destinations.
             </p>
           </div>
@@ -197,7 +197,7 @@ const ExploreSamburu = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <Car className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                      <span>Drive to Samburu National Reserve (1.5 hours)</span>
+                      <span>Drive to Samburu National Reserve (34 min away)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
@@ -251,7 +251,7 @@ const ExploreSamburu = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">Only 70km from Samburu National Reserve</span>
+                        <span className="text-muted-foreground">Only 39km from Samburu National Reserve</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
