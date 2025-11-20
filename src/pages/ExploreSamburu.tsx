@@ -71,7 +71,7 @@ const ExploreSamburu = () => {
       {/* Hero Section */}
       <Hero
         image={heroImage}
-        title="Your Gateway to Samburu National Reserve"
+        title="Your Gateway to Samburu and Northern Kenya"
         subtitle="Affordable luxury stays in Isiolo from KES 5,000 per night"
         showCTA={true}
         height="h-[85vh]"
