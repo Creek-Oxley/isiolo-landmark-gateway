@@ -1,370 +1,377 @@
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Check, MapPin, Phone, Mail } from "lucide-react";
 import { setupPageSEO } from "@/utils/seo";
+import { Phone, Mail, MessageCircle, Wifi, Car, UtensilsCrossed, Shield, Calendar, Users, Bed, MapPin, Clock, CheckCircle } from "lucide-react";
+
+// Import images
+import heroImage from "@/assets/samburu/hero-samburu.jpg";
+import samburu1 from "@/assets/samburu/_MG_0419 (1).jpg";
+import samburu2 from "@/assets/samburu/_MG_0425.jpg";
+import samburu3 from "@/assets/samburu/_MG_0915 (3).jpg";
+import samburu4 from "@/assets/samburu/_MG_1000.jpg";
+import samburu5 from "@/assets/samburu/_MG_5084 (1).jpg";
+import samburu6 from "@/assets/samburu/_MG_5122 (2).jpg";
+import samburu7 from "@/assets/samburu/_MG_5128 (2).jpg";
+import samburu8 from "@/assets/samburu/_MG_5477 (1).jpg";
+import room1 from "@/assets/rooms/_MG_0004.jpg";
+import room2 from "@/assets/rooms/_MG_0014.jpg";
+import dining1 from "@/assets/dining/_MG_0119.jpg";
+import dining2 from "@/assets/dining/_MG_0143.jpg";
 
 const ExploreNorthernKenya = () => {
   useEffect(() => {
     setupPageSEO({
       path: "/explore-northern-kenya",
-      title: "Explore Samburu from Isiolo – The Ultimate Northern Kenya Getaway | Landmark Hotel Isiolo",
-      description: "Experience the perfect fusion of Isiolo's urban comfort and Samburu's wilderness charm. 2 nights full board package from Ksh 20,000 per person. Book your Samburu safari from Isiolo Landmark Hotel today.",
-      keywords: "Isiolo hotels, Samburu lodges, Isiolo to Samburu tour, Isiolo accommodation, Samburu game drive, northern Kenya safari, Samburu Elephant Lodge, Landmark Hotel Isiolo, explore Samburu from Isiolo, weekend getaway Kenya"
+      title: "Affordable Isiolo Hotel - Gateway to Samburu National Reserve | Isiolo Landmark Hotel",
+      description: "Budget-friendly accommodation in Isiolo, the gateway to Samburu National Reserve. Starting from KES 5000. Perfect for travelers, NGOs, family getaways, and events. Book your stay before your Samburu adventure.",
+      keywords: "Isiolo hotels, affordable hotel in Isiolo, gateway to Samburu, Samburu National Reserve accommodation, budget stay near Samburu, Isiolo event venues, NGO accommodation Isiolo, Samburu travel, hotels near Samburu, Northern Kenya hotels, family getaways Isiolo"
     });
   }, []);
 
-  const scrollToBooking = () => {
-    const bookingSection = document.getElementById("booking");
-    if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: "smooth" });
-    }
+  const contactNumber = "0788138426";
+  const contactEmail = "info@isiololandmarkhotel.co.ke";
+
+  const handleCall = () => {
+    window.location.href = `tel:${contactNumber}`;
   };
 
-  const packageHighlights = [
-    "2 Nights Full Board Accommodation",
-    "Karaoke Night at Landmark Hotel",
-    "Early Morning Game Drive at Samburu",
-    "Sunrise Bush Breakfast in the Wild",
-    "Lunch by the Ewaso Nyiro River",
-    "Swimming Pool Access",
-    "Indoor & Outdoor Games",
-    "Kids' Paint & Brushes Corner",
-    "Discounted Spa Treatments",
-    "Transport Included"
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/254${contactNumber.substring(1)}`, "_blank");
+  };
+
+  const handleEmail = () => {
+    window.location.href = `mailto:${contactEmail}`;
+  };
+
+  const scrollToBooking = () => {
+    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const amenities = [
+    { icon: Wifi, label: "High-Speed WiFi" },
+    { icon: Car, label: "Secure Parking" },
+    { icon: UtensilsCrossed, label: "Restaurant & Catering" },
+    { icon: Shield, label: "24/7 Security" },
   ];
 
-  const rates = [
-    { 
-      category: "Standard Room", 
-      occupancy: "Single", 
-      bb: "5,000", 
-      hb: "7,000", 
-      fb: "8,500" 
-    },
-    { 
-      category: "Deluxe Room", 
-      occupancy: "Single", 
-      bb: "6,500", 
-      hb: "8,000", 
-      fb: "10,000" 
-    },
-    { 
-      category: "Deluxe Room", 
-      occupancy: "Double", 
-      bb: "8,000", 
-      hb: "9,500", 
-      fb: "11,000" 
-    },
-    { 
-      category: "Superior Deluxe", 
-      occupancy: "Single", 
-      bb: "7,500", 
-      hb: "9,000", 
-      fb: "10,500" 
-    },
-    { 
-      category: "Superior Deluxe", 
-      occupancy: "Double", 
-      bb: "9,000", 
-      hb: "10,500", 
-      fb: "12,000" 
-    },
-    { 
-      category: "Executive Suite", 
-      occupancy: "Single", 
-      bb: "8,500", 
-      hb: "10,000", 
-      fb: "11,500" 
-    },
-    { 
-      category: "Executive Suite", 
-      occupancy: "Double", 
-      bb: "10,000", 
-      hb: "13,000", 
-      fb: "16,000" 
-    }
+  const galleryImages = [
+    samburu1, samburu2, samburu3, samburu4,
+    samburu5, samburu6, samburu7, samburu8,
+    room1, room2, dining1, dining2
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2068')",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            From Urban Comfort to Wild Serenity
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-3xl mx-auto">
-            Your gateway to Samburu begins at Isiolo Landmark Hotel
-          </p>
-          <Button 
-            size="lg" 
-            variant="hero"
-            onClick={scrollToBooking}
-            className="text-lg px-8 py-6"
-          >
-            Book Your Samburu Escape
-          </Button>
-        </div>
-      </section>
 
-      {/* Overview Section */}
+      {/* Hero Section */}
+      <Hero
+        image={heroImage}
+        title="Your Gateway to Samburu and Northern Kenya"
+        subtitle="Affordable luxury stays in Isiolo from KES 5,000 per night"
+        showCTA={true}
+        height="h-[85vh]"
+      />
+
+      {/* Fixed CTA Buttons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <Button
+          onClick={handleCall}
+          className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 rounded-full w-14 h-14 flex items-center justify-center"
+          size="icon"
+        >
+          <Phone className="h-6 w-6" />
+        </Button>
+        <Button
+          onClick={handleWhatsApp}
+          className="bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full w-14 h-14 flex items-center justify-center"
+          size="icon"
+        >
+          <MessageCircle className="h-6 w-6" />
+        </Button>
+        <Button
+          onClick={handleEmail}
+          className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all duration-300 rounded-full w-14 h-14 flex items-center justify-center"
+          size="icon"
+        >
+          <Mail className="h-6 w-6" />
+        </Button>
+      </div>
+
+      {/* Why Isiolo Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">The Landmark–Samburu Escape Package</h2>
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Why Stay in Isiolo Before Your Samburu Adventure?
+            </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Experience the perfect fusion of Isiolo's urban comfort and Samburu's wilderness charm. 
-              Begin your journey at Landmark Hotel, Isiolo, and venture into the untamed beauty of 
-              Samburu National Reserve, where wildlife, tranquility, and culture blend seamlessly.
+              Isiolo is the perfect base for exploring Samburu National Reserve. Located just 38 km (approx. 35 min drive) away, 
+              our hotel offers budget-friendly comfort with easy access to one of Kenya's most stunning wildlife destinations.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Package Details Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Stay Details Card */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Package Overview</CardTitle>
-                  <CardDescription>2 Nights | Full Board</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-primary mb-4">
-                    Ksh 20,000 <span className="text-base font-normal text-muted-foreground">per person</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Transport inclusive</p>
-                </CardContent>
-              </Card>
-
-              {/* Why You'll Love It Card */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Why You'll Love It</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    A perfect balance of music, nature, and relaxation — from karaoke nights to sunrise safaris. 
-                    Experience the best of both worlds in Northern Kenya.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Package Highlights */}
-            <Card className="mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-2xl">Package Highlights</CardTitle>
-                <CardDescription>Everything included in your escape</CardDescription>
+                <MapPin className="h-12 w-12 text-primary mb-4" />
+                <CardTitle>Prime Location</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {packageHighlights.map((highlight, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{highlight}</span>
-                    </div>
-                  ))}
+                <p className="text-muted-foreground">
+                  Just 38 km (approx. 35 min drive) from Samburu National Reserve. Start your game drive in the morning and return to comfort in the evening.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Bed className="h-12 w-12 text-primary mb-4" />
+                <CardTitle>Pocket-Friendly Rates</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  From KES 5,000 per night. Save significantly compared to lodges inside the reserve while enjoying quality accommodation.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <UtensilsCrossed className="h-12 w-12 text-primary mb-4" />
+                <CardTitle>Full Amenities</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Restaurant, WiFi, secure parking, and comfortable rooms. Everything you need for a restful stay between adventures.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Sample Itinerary */}
+          <div className="bg-secondary rounded-lg p-8 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center text-foreground">Sample 2-Day Itinerary</h3>
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                    1
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Detailed Itinerary */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5" />
-                    At Landmark Hotel, Isiolo
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-muted-foreground">
+                <div>
+                  <h4 className="font-semibold text-lg mb-2 text-foreground">Day 1: Arrival & Overnight in Isiolo</h4>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>2 nights' stay on full board basis</span>
+                      <Clock className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>Check in at Isiolo Landmark Hotel by 2:00 PM</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Karaoke Night on the first evening</span>
+                      <UtensilsCrossed className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>Enjoy dinner at our restaurant featuring local cuisine</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Early morning departure for the Samburu adventure</span>
+                      <Bed className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>Rest in comfortable rooms with WiFi and modern amenities</span>
                     </li>
                   </ul>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5" />
-                    At Samburu Elephant Lodge
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-muted-foreground">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                    2
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2 text-foreground">Day 2: Full Day Safari in Samburu</h4>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Early Morning Game Drive at Samburu National Reserve</span>
+                      <Clock className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>Early breakfast at 6:00 AM</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Sunrise Bush Breakfast in the wild</span>
+                      <Car className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>Drive to Samburu National Reserve (38 km, approx. 35 min drive)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Lunch by the Riverbank overlooking the Ewaso Nyiro River</span>
+                      <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>Full day game drive - spot elephants, lions, leopards, and unique Samburu species</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Swimming in the lodge's tranquil pool</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Access to Indoor & Outdoor Games</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Kids' Paint & Brushes Corner</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                      <span>Discounted Spa Treats at the Grateful Glow Spa</span>
+                      <Bed className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>Return to Isiolo Landmark Hotel for dinner and overnight</span>
                     </li>
                   </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Landmark Hotel Rates Table */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-4">Landmark Hotel Accommodation Rates</h2>
-            <p className="text-center text-muted-foreground mb-12">
-              All rates in Kenyan Shillings (Ksh)
-            </p>
-            
-            <Card>
-              <CardContent className="p-6 overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead className="font-semibold">Room Category</TableHead>
-                      <TableHead className="font-semibold">Occupancy</TableHead>
-                      <TableHead className="font-semibold">Bed & Breakfast</TableHead>
-                      <TableHead className="font-semibold">Half Board</TableHead>
-                      <TableHead className="font-semibold">Full Board</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {rates.map((rate, index) => (
-                      <TableRow key={index}>
-                        <TableCell className="font-medium">{rate.category}</TableCell>
-                        <TableCell>{rate.occupancy}</TableCell>
-                        <TableCell>Ksh {rate.bb}</TableCell>
-                        <TableCell>Ksh {rate.hb}</TableCell>
-                        <TableCell>Ksh {rate.fb}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Booking & Contact Section */}
-      <section id="booking" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Book Your Escape Today</h2>
-            <p className="text-xl text-muted-foreground mb-12">
-              "From Karaoke Nights to Sunrise Safaris — Your Perfect Getaway Awaits!"
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-center gap-2">
-                    <Phone className="w-5 h-5" />
-                    Call / WhatsApp
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <a 
-                    href="tel:+254724515808" 
-                    className="text-lg text-primary hover:underline"
-                  >
-                    +254 724 515 808
-                  </a>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-center gap-2">
-                    <Mail className="w-5 h-5" />
-                    Email Us
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <a 
-                    href="mailto:reservations@isiololandmarkhotel.co.ke" 
-                    className="text-lg text-primary hover:underline break-all"
-                  >
-                    reservations@isiololandmarkhotel.co.ke
-                  </a>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="space-y-4">
-              <p className="text-muted-foreground">Follow us on social media</p>
-              <div className="flex justify-center gap-6 text-sm">
-                <a href="#" className="text-primary hover:underline">@LandmarkHotelIsiolo</a>
-                <span className="text-muted-foreground">|</span>
-                <a href="#" className="text-primary hover:underline">@SamburuElephantLodge</a>
+                </div>
               </div>
             </div>
-
-            <div className="mt-12">
-              <Button 
-                size="lg" 
-                variant="hero"
-                asChild
-              >
-                <a href="/reservation">Book Now</a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
+      {/* Three Main Offers */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+            Your Perfect Stay Awaits
+          </h2>
+
+          <div className="space-y-12 max-w-5xl mx-auto">
+            {/* Offer 1: Travelers to Northern Kenya */}
+            <Card className="border-border overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="grid md:grid-cols-2">
+                <div className="h-64 md:h-auto">
+                  <img 
+                    src={room1} 
+                    alt="Comfortable room at Isiolo Landmark Hotel" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8">
+                  <CardHeader className="p-0 mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Bed className="h-8 w-8 text-primary" />
+                      <CardTitle className="text-2xl">Budget-Friendly Gateway to Samburu</CardTitle>
+                    </div>
+                    <CardDescription className="text-base">
+                      Perfect for travelers and family getaways exploring Northern Kenya and Samburu National Reserve
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <ul className="space-y-3 mb-6">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Rooms starting from KES 5,000 per night</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Just 38 km (approx. 35 min drive) from Samburu National Reserve</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Save up to 60% compared to lodges inside the reserve</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Transport coordination available</span>
+                      </li>
+                    </ul>
+                    <Button onClick={scrollToBooking} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Check Availability
+                    </Button>
+                  </CardContent>
+                </div>
+              </div>
+            </Card>
+
+            {/* Offer 2: Events & Conferences */}
+            <Card className="border-border overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="grid md:grid-cols-2">
+                <div className="p-8 order-2 md:order-1">
+                  <CardHeader className="p-0 mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Calendar className="h-8 w-8 text-primary" />
+                      <CardTitle className="text-2xl">Events & Corporate Meetings</CardTitle>
+                    </div>
+                    <CardDescription className="text-base">
+                      Host your conferences, workshops, and celebrations in Isiolo
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <ul className="space-y-3 mb-6">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Spacious halls accommodating 150-500 guests</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Full catering services with local cuisine</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Guest accommodation packages available</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Central location in Isiolo town</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Modern AV equipment and WiFi</span>
+                      </li>
+                    </ul>
+                    <Button onClick={scrollToBooking} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Plan Your Event
+                    </Button>
+                  </CardContent>
+                </div>
+                <div className="h-64 md:h-auto order-1 md:order-2">
+                  <img 
+                    src={dining1} 
+                    alt="Event space at Isiolo Landmark Hotel" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </Card>
+
+            {/* Offer 3: NGOs & Research Teams */}
+            <Card className="border-border overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="grid md:grid-cols-2">
+                <div className="h-64 md:h-auto">
+                  <img 
+                    src={room2} 
+                    alt="Long-stay accommodation at Isiolo Landmark Hotel" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8">
+                  <CardHeader className="p-0 mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Users className="h-8 w-8 text-primary" />
+                      <CardTitle className="text-2xl">NGO & Research Team Accommodation</CardTitle>
+                    </div>
+                    <CardDescription className="text-base">
+                      Ideal for NGOs, researchers, and field teams requiring comfortable long-term stays
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <ul className="space-y-3 mb-6">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Flexible stay durations for long-term projects</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Affordable rates starting from KES 5,000 per night</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Meals and laundry options available for long stays</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Secure environment with 24/7 monitoring</span>
+                      </li>
+                    </ul>
+                    <Button onClick={scrollToBooking} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Reserve Your Stay
+                    </Button>
+                  </CardContent>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
