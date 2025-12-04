@@ -52,7 +52,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground">to Airport</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-accent mb-2">150+</p>
+                <p className="text-4xl font-bold text-accent mb-2">500+</p>
                 <p className="text-sm text-muted-foreground">Conference Capacity</p>
               </div>
               <div className="text-center">
