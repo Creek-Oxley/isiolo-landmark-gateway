@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+Isiolo Landmark Hotel Web Application
+Project Overview
 
-## Project info
+This repository contains the official web application for Isiolo Landmark Hotel.
+The project is designed to support the hotel’s digital presence, including presentation, updates, and future integrations related to reservations, guest engagement, and brand communication.
 
-**URL**: https://lovable.dev/projects/87d40569-9057-42b1-81a7-e48b4d524d3f
+Repository Usage
 
-## How can I edit this code?
+This codebase can be edited, extended, and deployed using standard modern web development workflows.
 
-There are several ways of editing your application.
+Working Locally
 
-**Use Lovable**
+You can work on the project locally using your preferred IDE.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/87d40569-9057-42b1-81a7-e48b4d524d3f) and start prompting.
+Requirements
 
-Changes made via Lovable will be committed automatically to this repo.
+Node.js
 
-**Use your preferred IDE**
+npm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If Node.js is not installed, it is recommended to install it using nvm.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+Setup Steps
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd <PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The development server supports hot reloading for faster iteration.
 
-**Use GitHub Codespaces**
+Editing Directly on GitHub
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+You may also:
 
-## What technologies are used for this project?
+Navigate to any file in the repository
 
-This project is built with:
+Click the Edit icon
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Commit changes directly to the main branch
 
-## How can I deploy this project?
+This approach is suitable for small updates and content changes.
 
-Simply open [Lovable](https://lovable.dev/projects/87d40569-9057-42b1-81a7-e48b4d524d3f) and click on Share -> Publish.
+Using GitHub Codespaces
 
-## Can I connect a custom domain to my Lovable project?
+For a cloud-based development environment:
 
-Yes, you can!
+Open the repository
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Click Code
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Select Codespaces
+
+Create a new Codespace
+
+Make changes, then commit and push
+
+Technologies Used
+
+This project is built using the following technologies:
+
+Vite
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+shadcn-ui
+
+These tools were chosen for performance, maintainability, and scalability.
+
+Deployment
+
+The application can be deployed using any modern frontend hosting provider that supports Node-based builds.
+Deployment configuration may vary depending on the chosen platform.
+
+Custom Domain Support
+
+A custom domain can be connected through the hosting provider used for deployment.
+Refer to the provider’s documentation for DNS and domain configuration steps.
